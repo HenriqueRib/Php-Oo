@@ -11,7 +11,7 @@ use classes\sistemaInterno\GerenciadorBonificacao;
 
 $diretor = new Diretor("420.777.008.90" , 10000);
 $diretor->senha = "123456";
-$designer = new Designer("320.888.009.80",1000);
+$designer = new Designer("320.888.009.80");
 
 $gerenciador = new GerenciadorBonificacao();
 

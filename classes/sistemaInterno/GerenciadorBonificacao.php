@@ -26,8 +26,12 @@ class GerenciadorBonificacao implements Autenticavel
     }
     public function AutentiqueAqui(FuncionarioAutenticavel $funcionario, $senha)
     {
-            if($funcionario->senha == $senha){
-                $this->autentificado = true;
-            }
+
+        $this->autentificado = $funcionario->autenticar($senha);
+        // Essa linha de cima faz a mesma coisa que as 3 linhas de baixo
+//            if($funcionario->senha == $senha){
+//                $this->autentificado = true;
+//            }
+
     }
 }

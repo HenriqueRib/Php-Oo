@@ -7,8 +7,9 @@ abstract class Funcionario
     public $nome;
     public $cpf;
     protected $salario;
+    const piso = 1097.20;
 
-    public function __construct($cpf,$salario)
+    public function __construct($cpf,$salario = self::piso)
     {
         $this->cpf = $cpf;
         $this->salario = $salario;
@@ -16,7 +17,7 @@ abstract class Funcionario
 
    abstract public function getBonificacao();
 
-    public function aumentaSalario()
+    final public function aumentaSalario()
     {
          $this->salario *= 1.5;
     }
